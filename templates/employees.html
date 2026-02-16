@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+    <body>
+        <h2>Add New Employee</h2>
+        <form action="/add-employee" method="post">
+            <input type="text" name="name" placeholder="Name" required />
+            <input
+                type="text"
+                name="department"
+                placeholder="Department"
+                required
+            />
+            <button type="submit">Add</button>
+        </form>
+
+        <hr />
+        <h2>Employee List</h2>
+        <ul>
+            {% for emp in employees %}
+            <li>{{ emp.name }} - {{ emp.dept }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
